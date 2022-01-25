@@ -5,34 +5,28 @@ using namespace std;
 
 int solve()
 {
-    string n;
-    int l, k, x = 0;
-    cin >> l >> k;
-    cin >> n;
-    for (int i = 0; i < l / 2; i++)
-    {
-        if (n[i] != n[l - 1 - i])
-            x++;
-    }
+    int a[5][5];
+    for (int i = 0; i < 5; i++)
+        for (int j = 0; j < 5; j++)
+            cin >> a[i][j];
 
-    if (x == k)
-        return 0;
-    else if (x > k)
-        return x - k;
-    else
-        return k - x;
+    for (int i = 0; i < 5; i++)
+        for (int j = 0; j < 5; j++)
+        {
+            if (a[i][j] == 1)
+            {
+                cout << abs(2 - i) + abs(2 - j) << endl;
+                return 0;
+            }
+        }
+
+    return 0;
 }
 
 int32_t main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int t, j = 1;
-    cin >> t;
-    while (j <= t)
-    {
-        cout << "Case #" << j << ": " << solve() << endl;
-        j++;
-    }
+    solve();
     return 0;
 }
