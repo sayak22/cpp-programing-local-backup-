@@ -1,0 +1,2 @@
+< "-" << imaginaryPart << "i" << endl;
+    }

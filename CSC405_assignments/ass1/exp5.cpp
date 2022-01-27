@@ -1,6 +1,5 @@
 // Sayak Mondal/20155
 #include <iostream>
-
 using namespace std;
 
 int main(int argc, char const *argv[])
@@ -12,12 +11,8 @@ int main(int argc, char const *argv[])
     cout << "Enter temperature = ";
     cin >> t;
     if (ch == '1')
-    {
         cout << "temperature in farenheit = " << 9 * (t / 5) + 32;
-    }
     else
-    {
         cout << "temperature in celcius = " << 5 * (t - 32) / 9;
-    }
     return 0;
 }
