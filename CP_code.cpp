@@ -1,62 +1,42 @@
+//<_____CODED BY SAYAK_____>
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long int
 #define pb push_back
 #define fr(i, a, b) for (int i = a; i < b; i++)
 #define en cout << endl
+#define sortrev(v) sort(v.end(), v.begin())
 #define mp make_pair
+#define sortall(v) sort(v.begin(), v.end())
+#define pi 3.141592653589793238
+typedef vector<int> vi;
+typedef pair<int, int> pii;
 
-int solve()
+//********************CUSTOM FUNCTIONS************************
+bool sortbysec(const pair<char, int> &f, const pair<char, int> &s)
 {
-    int n;
-    cin >> n;
-    int a[n];
-    fr(i, 0, n) cin >> a[i];
-    int key = a[n - 1], count = 0, range = 1, c = 0, start = n - 2;
-    for (int i = n - 2; i >= 0; i--)
-    {
-        if (a[i] == key)
-            range++;
-        else
-        {
-            start = i;
-            break;
-        }
-    }
-
-    for (int i = start; i >= 0; i--)
-    {
-        if (a[i] != key)
-        {
-            count++;
-        }
-        else if (count != 0 && count < range)
-        {
-            range += (n - range) - i;
-            count = 0;
-            c++;
-        }
-        if (count == range)
-        {
-            count = 0;
-            range *= 2;
-            c++;
-        }
-    }
-    cout << c;
-    en;
-    return 0;
+  return (f.second < s.second);
 }
+
+//*********************SOLUTION FUNCTION************************
+
+int solution()
+{
+
+  return 0;
+}
+
+//*********************MAIN FUNCTION************************
 
 int32_t main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        solve();
-    }
-    return 0;
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+  int t;
+  cin >> t;
+  while (t--)
+  {
+    solution();
+  }
+  return 0;
 }
