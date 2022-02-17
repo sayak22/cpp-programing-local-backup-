@@ -22,7 +22,8 @@ bool sortbysec(const pair<char, int> &f, const pair<char, int> &s)
 
 int solution()
 {
-
+  int hc, dc, hm, dm, k, w, a;
+  cin >> hc >> dc >> hm >> dm >> k >> w >> a;
   return 0;
 }
 
